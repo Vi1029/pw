@@ -1,0 +1,320 @@
+/* CSS Kustom Anda di sini */
+.video-background {
+    position: fixed; /* Mengatur posisi video tetap */
+    top: 50%; /* Mengatur posisi vertikal */
+    left: 50%; /* Mengatur posisi horizontal */
+    min-width: 100%; /* Memastikan lebar minimal 100% */
+    min-height: 100%; /* Memastikan tinggi minimal 100% */
+    width: auto; /* Lebar otomatis */
+    height: auto; /* Tinggi otomatis */
+    z-index: -1; /* Menempatkan video di belakang konten lainnya */
+    transform: translate(-50%, -50%); /* Memusatkan video */
+    object-fit: cover; /* Memastikan video mengisi area tanpa distorsi */
+}
+
+body {
+    margin: 0; /* Menghilangkan margin default */
+    padding: 0; /* Menghilangkan padding default */
+    font-family: 'Poppins', sans-serif; /* Menggunakan font Poppins */
+    background: linear-gradient(to right,#fdf1dd,#fbf1dc,#ddd7c5); /* Warna latar belakang lebih terang */
+    color: #343a40;
+    line-height: 1.6;
+    overflow-x: hidden; /* Mencegah scroll horizontal yang tidak diinginkan */
+}
+
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+.custom-navbar {
+    background-color: transparent !important;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+/* Navbar Styling */
+.navbar {
+    padding: 1rem 2rem; /* Padding lebih besar untuk navbar */
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.7rem;
+    color: white !important;
+    letter-spacing: 0.5px;
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+    color: white !important;
+    transform: translateY(-2px);
+}
+
+.navbar-nav .nav-link.active {
+    color: white !important;
+    font-weight: 600;
+    border-bottom: 2px solid white;
+    padding-bottom: 3px;
+}
+
+
+/* Jumbotron Styling */
+.jumbotron {
+    color: white;
+    padding: 0; /* Menghilangkan padding */
+    margin-bottom: 3rem;
+    border-radius: 0; /* Menghilangkan border-radius untuk tampilan full-width */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.jumbotron h1 {
+    font-size: 3.8rem; /* Ukuran font lebih besar */
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.jumbotron p.lead {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+/* Background gradient animation for jumbotron (optional) */
+.jumbotron::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(50px);
+    transform: scale(1.2);
+    opacity: 0.3;
+    animation: gradientShift 15s ease infinite alternate;
+    z-index: -1;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+
+/* Section Title Styling */
+.section-title {
+    margin-bottom: 3.5rem;
+    font-weight: 700;
+    color:rgb(251, 244, 239);
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #689eaa;
+    border-radius: 5px;
+}
+
+/* Card Styling */
+.card {
+    background-color: transparent !important;
+    margin-bottom: 1.5rem;
+    border: none;
+    border-radius: .75rem; /* Border-radius lebih besar */
+    padding: 0; /* Menghilangkan padding */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efek angkat saat hover */
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+
+.card-body, .card p, .list-group-item {
+    font-size: 1.05rem; /* Ukuran font lebih nyaman dibaca */
+}
+
+/* Pengenalan Diri Card */
+#pengenalan .img-fluid {
+    border: 5px solid #689eaa;
+    box-shadow: 0 0 15px rgba(215, 103, 227, 0.3);
+}
+
+/* Progress Bar Styling */
+.progress {
+    height: 28px; /* Tinggi progress bar sedikit lebih besar */
+    background-color: #e2e6ea; /* Latar belakang progress bar lebih terang */
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.progress-bar-custom {
+    background: #e198a3; /* Gradasi hijau */
+    color: white;
+    text-align: center;
+    line-height: 28px;
+    font-weight: 600;
+    transition: width 1s ease-in-out; /* Animasi saat bar muncul */
+}
+
+/* Hobi Section Styling */
+#hobi .card {
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+#hobi .card i {
+    font-size: 4.5rem; /* Ukuran ikon hobi lebih besar */
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#hobi .card:hover i {
+    transform: scale(1.1);
+}
+
+#hobi .card:nth-child(1) i { color: #007bff; } /* Warna ikon sesuai kategori */
+#hobi .card:nth-child(2) i { color: #28a745; }
+#hobi .card:nth-child(3) i { color: #ffc107; }
+#hobi .card:nth-child(4) i { color: #17a2b8; }
+
+
+/* List Group Styling */
+.list-group-item {
+    border: none;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e0e0e0; /* Pemisah antar item */
+    background-color: transparent;
+}
+.list-group-item:last-child {
+    border-bottom: none;
+}
+.list-group-flush .list-group-item:first-child {
+    border-top-left-radius: .75rem;
+    border-top-right-radius: .75rem;
+}
+.list-group-flush .list-group-item:last-child {
+    border-bottom-left-radius: .75rem;
+    border-bottom-right-radius: .75rem;
+}
+
+
+/* Footer Styling */
+.footer {
+    background-color: transparent !important;
+    box-shadow: none;
+}
+footer {
+    color: rgba(255, 255, 255, 0.8);
+    padding: 2rem 0;
+    font-size: 0.95rem;
+}
+
+.social-links a {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Separator Line */
+hr {
+    border-top: 2px solid rgba(0, 123, 255, 0.2);
+    width: 60%;
+    margin: 4rem auto; /* Margin atas dan bawah lebih besar */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .jumbotron h1 {
+        font-size: 2.8rem;
+    }
+    .jumbotron p.lead {
+        font-size: 1.2rem;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+    #hobi .card i {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .jumbotron {
+        padding: 4rem 1rem;
+    }
+    .jumbotron h1 {
+        font-size: 2.2rem;
+    }
+    .jumbotron p.lead {
+        font-size: 1rem;
+    }
+    .navbar-brand {
+        font-size: 1.4rem;
+    }
+    .section-title {
+        font-size: 1.6rem;
+    }
+    hr {
+        width: 80%;
+    }
+}
+.no-wrap-text {
+    white-space: nowrap; /* Teks tidak akan melipat */
+    overflow: hidden;    /* Menyembunyikan teks yang melebihi batas */
+    text-overflow: ellipsis; /* Menambahkan "..." jika teks terpotong */
+}
+/* Gaya Kustom untuk Foto/Ikon Kegiatan */
+.activity-img {
+    width: 70px; /* Ukuran gambar kegiatan */
+    height: 70px;
+    object-fit: cover; /* Memastikan gambar memenuhi area tanpa terdistorsi */
+    border: 3px solid #007bff; /* Bingkai di sekitar gambar */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+}
+
+.activity-icon {
+    font-size: 3.5rem; /* Ukuran ikon kegiatan lebih besar */
+    color: #007bff; /* Warna default ikon */
+    transition: transform 0.3s ease;
+}
+
+.list-group-item:hover .activity-icon {
+    transform: scale(1.1); /* Efek zoom saat hover */
+}
+
+/* Penyesuaian responsif untuk ikon/gambar kegiatan */
+@media (max-width: 767px) {
+    .activity-icon {
+        font-size: 3rem; /* Sedikit lebih kecil di mobile */
+    }
+    .activity-img {
+        width: 60px;
+        height: 60px;
+    }
+    /* Pastikan teks tidak terlalu mepet jika gambar/ikon besar */
+    .list-group-item .col-md-10, .list-group-item .col-9 {
+        padding-left: 10px; /* Sedikit padding tambahan */
+    }
+}
