@@ -11,7 +11,9 @@
     transform: translate(-50%, -50%); /* Memusatkan video */
     object-fit: cover; /* Memastikan video mengisi area tanpa distorsi */
 }
-
+p, h1, h2, h3, h4, h5, h6, strong,li {
+    color: white
+}
 body {
     margin: 0; /* Menghilangkan margin default */
     padding: 0; /* Menghilangkan padding default */
@@ -196,6 +198,7 @@ body {
 
 /* List Group Styling */
 .list-group-item {
+    color: white;
     border: none;
     padding: 1rem 0;
     border-bottom: 1px solid #e0e0e0; /* Pemisah antar item */
